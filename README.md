@@ -1,0 +1,2 @@
+This is a personal project to scrape Crunchyroll's popular anime list, along with the star ratings and links to the cover art.
+Final project will display all the popular titles, with cover art, in order of their 5 star ratings.
