@@ -1,3 +1,6 @@
+#Remove this import.
+from atlasauth import atlas_db_name, atlas_acc_uri
+
 # -*- coding: utf-8 -*-
 
 # Scrapy settings for crunchy_scrape project
@@ -64,9 +67,14 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'crunchy_scrape.pipelines.CrunchyScrapePipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'crunchy_scrape.pipelines.CrunchyScrapePipeline': 300,
+}
+#Mongodb details. enabled pipeline above.
+#Insert details directly here and remove the import at the top. 
+#Be sure to place the URI and DB between ' '.
+MONGO_URI = atlas_acc_uri
+MONGO_DATABASE = atlas_db_name
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
