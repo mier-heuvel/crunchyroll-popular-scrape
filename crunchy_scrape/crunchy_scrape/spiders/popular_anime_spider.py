@@ -21,4 +21,4 @@ class PopularAnime(scrapy.Spider):
             '1-stars': css_extract('ul.rating-histogram:nth-child(3) > li:nth-child(5) > div:nth-child(3)::text').strip('()'),
             'cover-link': css_extract('.poster::attr(src)'),
             'simulcast': css_extract('#sidebar_elements.list-block li.large-margin-bottom p.strong::text'),
-        }       
+        }
